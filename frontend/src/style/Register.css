@@ -1,0 +1,338 @@
+
+.ub-register-page {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px 90px;
+  box-sizing: border-box;
+  background:
+    radial-gradient(
+      circle at 15% 15%,
+      rgba(249, 115, 22, 0.12),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 85% 85%,
+      rgba(255, 183, 115, 0.15),
+      transparent 35%
+    ),
+    #fff8f2;
+  color: #30221c;
+}
+
+.ub-register-card {
+  width: 100%;
+  max-width: 540px;
+  padding: 42px 44px;
+  background: #ffffff;
+  border: 1px solid #f2dfd0;
+  border-radius: 24px;
+  box-shadow: 0 20px 60px rgba(80, 43, 16, 0.08);
+  box-sizing: border-box;
+  animation: ubRegisterFade 0.45s ease;
+}
+
+@keyframes ubRegisterFade {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.ub-register-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.ub-register-logo {
+  width: 78px;
+  height: 78px;
+  margin: 0 auto 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff0e2;
+  border-radius: 22px;
+  font-size: 42px;
+  box-shadow: 0 8px 22px rgba(249, 115, 22, 0.1);
+}
+
+.ub-register-header h1 {
+  font-family: Arial, sans-serif;
+  color: #f97316;
+  font-size: 30px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  margin: 0 0 12px;
+}
+
+.ub-register-header h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  color: #30221c;
+  font-size: 28px;
+  font-weight: 800;
+  margin: 0 0 12px;
+}
+
+.ub-register-header p {
+  color: #987e6e;
+  font-size: 14px;
+  line-height: 1.7;
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+.ub-register-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.ub-register-group {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-bottom: 21px;
+  min-width: 0;
+}
+
+.ub-register-group label {
+  color: #4d3529;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.ub-register-group > input,
+.ub-register-group > select,
+.ub-register-password input {
+  width: 100%;
+  min-height: 53px;
+  padding: 14px 16px;
+  box-sizing: border-box;
+  border: 1px solid #efdccc;
+  border-radius: 12px;
+  background: #fffaf7;
+  color: #30221c;
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.ub-register-group input::placeholder {
+  color: #b09b8e;
+}
+
+.ub-register-group input:focus,
+.ub-register-group select:focus {
+  border-color: #f97316;
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.1);
+}
+
+.ub-register-group > select {
+  cursor: pointer;
+  appearance: auto;
+}
+
+.ub-register-group > select:disabled {
+  background: #f7f3ef;
+  color: #8c7568;
+  cursor: not-allowed;
+  opacity: 1;
+}
+
+.ub-register-hint {
+  color: #a18b7c;
+  font-size: 12px;
+  line-height: 1.5;
+  margin-top: 2px;
+}
+
+.ub-register-password {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.ub-register-password input {
+  padding-right: 55px;
+}
+
+.ub-register-eye {
+  position: absolute;
+  right: 9px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  border: none;
+  border-radius: 9px;
+  background: transparent;
+  color: #9b806e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.ub-register-eye:hover {
+  background: #fff0e2;
+  color: #f97316;
+}
+
+.ub-register-submit {
+  width: 100%;
+  min-height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 8px;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 12px;
+  background: #f97316;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(249, 115, 22, 0.2);
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+.ub-register-submit:hover:not(:disabled) {
+  background: #e7650c;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(249, 115, 22, 0.25);
+}
+
+.ub-register-submit:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.ub-register-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.ub-register-error {
+  padding: 14px 16px;
+  margin-bottom: 24px;
+  background: #ffe7e7;
+  border: 1px solid #ffcaca;
+  border-radius: 11px;
+  color: #b91c1c;
+  font-size: 13px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.ub-register-login {
+  text-align: center;
+  color: #8c7568;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 28px 0 0;
+}
+
+.ub-register-login a {
+  color: #f97316;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.ub-register-login a:hover {
+  text-decoration: underline;
+}
+
+.ub-register-page button:focus-visible,
+.ub-register-page a:focus-visible {
+  outline: 3px solid #f97316;
+  outline-offset: 3px;
+}
+
+@media (max-width: 768px) {
+  .ub-register-page {
+    padding: 45px 20px 70px;
+  }
+
+  .ub-register-card {
+    max-width: 500px;
+    padding: 36px 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ub-register-page {
+    padding: 25px 15px 55px;
+    align-items: flex-start;
+  }
+
+  .ub-register-card {
+    padding: 30px 22px;
+    border-radius: 18px;
+  }
+
+  .ub-register-logo {
+    width: 68px;
+    height: 68px;
+    font-size: 36px;
+    border-radius: 18px;
+  }
+
+  .ub-register-header h1 {
+    font-size: 25px;
+  }
+
+  .ub-register-header h2 {
+    font-size: 24px;
+  }
+
+  .ub-register-header p {
+    font-size: 13px;
+  }
+
+  .ub-register-group {
+    margin-bottom: 18px;
+  }
+
+  .ub-register-group > input,
+  .ub-register-group > select,
+  .ub-register-password input {
+    min-height: 50px;
+    font-size: 14px;
+  }
+
+  .ub-register-submit {
+    min-height: 52px;
+    font-size: 14px;
+  }
+
+  .ub-register-login {
+    font-size: 13px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ub-register-card {
+    animation: none;
+  }
+
+  .ub-register-submit,
+  .ub-register-eye {
+    transition: none;
+  }
+}

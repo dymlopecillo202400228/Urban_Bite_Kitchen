@@ -1,0 +1,371 @@
+.ub-checkout-page {
+  min-height: 100vh;
+  background: #fff8f2;
+  padding: 60px 24px 100px;
+  color: #30221c;
+}
+
+.ub-checkout-heading {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 48px;
+}
+
+.ub-eyebrow {
+  display: inline-block;
+  color: #f97316;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  margin-bottom: 14px;
+}
+
+.ub-checkout-heading h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 16px;
+}
+
+.ub-checkout-heading p {
+  color: #987e6e;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.ub-checkout-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(300px, 1fr);
+  gap: 28px;
+  align-items: start;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.ub-checkout-card {
+  background: #ffffff;
+  border: 1px solid #f0dfd0;
+  border-radius: 22px;
+  padding: 36px;
+  box-shadow: 0 8px 30px rgba(65, 38, 17, 0.035);
+  min-width: 0;
+}
+
+.ub-checkout-card h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 27px;
+  font-weight: 700;
+  margin: 0 0 30px;
+  color: #30221c;
+}
+
+.ub-checkout-field {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.ub-checkout-field label {
+  color: #4a3022;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.ub-checkout-field input,
+.ub-checkout-field textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #ead8ca;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 16px 18px;
+  font-family: inherit;
+  font-size: 15px;
+  color: #30221c;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.ub-checkout-field input {
+  min-height: 56px;
+}
+
+.ub-checkout-field textarea {
+  min-height: 145px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.ub-checkout-field input::placeholder,
+.ub-checkout-field textarea::placeholder {
+  color: #b6a396;
+}
+
+.ub-checkout-field input:focus,
+.ub-checkout-field textarea:focus {
+  border-color: #f97316;
+  box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.10);
+}
+
+.ub-checkout-field input[readonly] {
+  background: #fff8f2;
+  color: #73513d;
+  cursor: default;
+}
+
+.ub-checkout-error {
+  padding: 15px 18px;
+  background: #fee2e2;
+  color: #dc2626;
+  border: 1px solid #fecaca;
+  border-radius: 12px;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 22px;
+  overflow-wrap: anywhere;
+}
+
+.ub-place-order {
+  width: 100%;
+  min-height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  border: none;
+  border-radius: 12px;
+  background: #f97316;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 800;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.ub-place-order:hover:not(:disabled) {
+  background: #e7650c;
+  transform: translateY(-2px);
+}
+
+.ub-place-order:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.ub-place-order:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+
+.ub-order-summary {
+  position: sticky;
+  top: 100px;
+}
+
+.ub-summary-items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid #f0dfd0;
+}
+
+.ub-summary-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 18px;
+  font-size: 14px;
+}
+
+.ub-summary-item span {
+  color: #70584a;
+  line-height: 1.5;
+  flex: 1;
+}
+
+.ub-summary-item strong {
+  color: #30221c;
+  font-size: 15px;
+  white-space: nowrap;
+}
+
+.ub-summary-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-top: 28px;
+}
+
+.ub-summary-total strong:first-child {
+  color: #30221c;
+  font-size: 17px;
+}
+
+.ub-summary-total strong:last-child {
+  color: #f97316;
+  font-size: 26px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.ub-summary-note {
+  color: #a18a7a;
+  font-size: 13px;
+  line-height: 1.6;
+  margin-top: 12px;
+}
+
+.ub-summary-info {
+  border-top: 1px solid #f0dfd0;
+  margin-top: 30px;
+  padding-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.ub-summary-info p {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  color: #907768;
+  font-size: 14px;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.ub-summary-info svg {
+  flex-shrink: 0;
+  color: #f97316;
+}
+
+
+.ub-empty-cart {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.ub-empty-cart p {
+  color: #987e6e;
+  margin-bottom: 22px;
+}
+
+.ub-empty-cart button {
+  background: #f97316;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 13px 24px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.ub-empty-cart button:hover {
+  background: #e7650c;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+  .ub-checkout-page {
+    padding: 45px 20px 70px;
+  }
+
+  .ub-checkout-grid {
+    grid-template-columns: 1fr;
+    max-width: 680px;
+  }
+
+  .ub-order-summary {
+    position: static;
+  }
+
+  .ub-checkout-card {
+    padding: 28px;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .ub-checkout-page {
+    padding: 35px 15px 60px;
+  }
+
+  .ub-checkout-heading {
+    margin-bottom: 30px;
+  }
+
+  .ub-checkout-heading h1 {
+    font-size: 30px;
+  }
+
+  .ub-checkout-heading p {
+    font-size: 13px;
+  }
+
+  .ub-eyebrow {
+    font-size: 10px;
+  }
+
+  .ub-checkout-grid {
+    gap: 20px;
+  }
+
+  .ub-checkout-card {
+    padding: 22px;
+    border-radius: 17px;
+  }
+
+  .ub-checkout-card h2 {
+    font-size: 24px;
+    margin-bottom: 25px;
+  }
+
+  .ub-checkout-field {
+    margin-bottom: 20px;
+  }
+
+  .ub-checkout-field input,
+  .ub-checkout-field textarea {
+    font-size: 14px;
+    padding: 14px 15px;
+  }
+
+  .ub-checkout-field input {
+    min-height: 50px;
+  }
+
+  .ub-checkout-field textarea {
+    min-height: 120px;
+  }
+
+  .ub-place-order {
+    min-height: 54px;
+    font-size: 14px;
+  }
+
+  .ub-summary-total strong:last-child {
+    font-size: 23px;
+  }
+}
+
+@media (max-width: 380px) {
+  .ub-checkout-page {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .ub-checkout-card {
+    padding: 17px;
+  }
+
+  .ub-summary-total strong:last-child {
+    font-size: 20px;
+  }
+}
