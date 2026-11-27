@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 
 import { api } from "../api";
+import "../style/AdminDashboard.css";
 
 const emptyForm = {
   name: "",

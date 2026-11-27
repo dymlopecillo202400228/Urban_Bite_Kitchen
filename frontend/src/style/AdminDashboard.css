@@ -1,0 +1,614 @@
+
+.ub-admin-page {
+  min-height: 100vh;
+  background: #fff8f2;
+  padding: 40px 24px 60px;
+  color: #30221c;
+  font-family: "Inter", Arial, sans-serif;
+}
+
+.ub-admin-page * {
+  box-sizing: border-box;
+}
+
+.ub-admin-container {
+  width: 100%;
+  max-width: 1400px;
+  min-width: 0;
+  margin: 0 auto;
+}
+
+.ub-admin-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.ub-admin-eyebrow {
+  color: #f97316;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin: 0 0 10px;
+}
+
+.ub-admin-header h1 {
+  font-size: clamp(26px, 4vw, 36px);
+  font-weight: 800;
+  color: #30221c;
+  margin: 0 0 10px;
+}
+
+.ub-admin-header p:not(.ub-admin-eyebrow) {
+  color: #8b7568;
+  font-size: 14px;
+  margin: 0;
+}
+
+.ub-admin-primary,
+.ub-admin-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: 0.2s ease;
+}
+
+.ub-admin-primary {
+  background: #f97316;
+  color: #ffffff;
+  border: 1px solid #f97316;
+  box-shadow: 0 5px 15px rgba(249, 115, 22, 0.18);
+}
+
+.ub-admin-primary:hover {
+  background: #ea580c;
+  border-color: #ea580c;
+  transform: translateY(-2px);
+}
+
+.ub-admin-outline {
+  background: #ffffff;
+  color: #6b5141;
+  border: 1px solid #eaded5;
+}
+
+.ub-admin-outline:hover {
+  background: #fff1e5;
+  color: #ea580c;
+  border-color: #f97316;
+}
+
+.ub-admin-page button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.ub-admin-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.ub-admin-stat {
+  background: #ffffff;
+  border: 1px solid #f0e4db;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 18px rgba(80, 45, 20, 0.04);
+  transition: 0.2s ease;
+}
+
+.ub-admin-stat:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(80, 45, 20, 0.08);
+}
+
+.ub-admin-stat > svg {
+  width: 48px;
+  height: 48px;
+  padding: 12px;
+  background: #fff0e3;
+  border-radius: 12px;
+  margin-bottom: 14px;
+}
+
+.ub-admin-stat p {
+  color: #8b7568;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0 0 8px;
+}
+
+.ub-admin-stat h2 {
+  color: #30221c;
+  font-size: 32px;
+  font-weight: 800;
+  margin: 0;
+}
+
+.ub-admin-stat:nth-child(2) > svg {
+  background: #dcfce7;
+  color: #16a34a !important;
+}
+
+.ub-admin-stat:nth-child(3) > svg {
+  background: #fee2e2;
+  color: #dc2626 !important;
+}
+
+.ub-admin-stat:nth-child(4) > svg {
+  background: #fef3c7;
+  color: #d97706 !important;
+}
+
+.ub-admin-panel {
+  background: #ffffff;
+  border: 1px solid #f0e4db;
+  border-radius: 18px;
+  padding: 24px;
+  min-width: 0;
+  box-shadow: 0 5px 25px rgba(80, 45, 20, 0.05);
+}
+
+.ub-admin-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.ub-admin-panel-header h2 {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.ub-admin-tools {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ub-admin-search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #fffaf6;
+  border: 1px solid #eaded5;
+  border-radius: 10px;
+  padding: 11px 14px;
+  color: #9a8171;
+}
+
+.ub-admin-search:focus-within {
+  border-color: #f97316;
+  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.1);
+}
+
+.ub-admin-search input {
+  width: 220px;
+  min-width: 0;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #30221c;
+  font-size: 14px;
+}
+
+.ub-admin-table-wrap {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  border: 1px solid #f0e4db;
+  border-radius: 12px;
+}
+
+.ub-admin-table {
+  width: 100%;
+  min-width: 850px;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.ub-admin-table thead {
+  background: #fff3e9;
+}
+
+.ub-admin-table th {
+  padding: 17px 16px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #805a40;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.ub-admin-table td {
+  padding: 16px;
+  border-bottom: 1px solid #f3eae3;
+  font-size: 14px;
+  color: #594338;
+  vertical-align: middle;
+}
+
+.ub-admin-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.ub-admin-table tbody tr:hover {
+  background: #fffaf6;
+}
+
+.ub-admin-table td[colspan] {
+  text-align: center;
+  padding: 40px;
+  color: #8b7568;
+}
+
+.ub-admin-product {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 180px;
+}
+
+.ub-admin-product img,
+.ub-admin-product > span {
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background: #fff0e3;
+  object-fit: cover;
+}
+
+.ub-admin-product > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+}
+
+.ub-admin-product strong {
+  font-size: 14px;
+  font-weight: 700;
+  color: #30221c;
+}
+
+.ub-status-active,
+.ub-status-inactive {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 12px;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.ub-status-active {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.ub-status-inactive {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.ub-status-active::before,
+.ub-status-inactive::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.ub-admin-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ub-admin-actions button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 9px 12px;
+  border: 1px solid #fed7aa;
+  background: #fff7ed;
+  color: #ea580c;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: 0.2s ease;
+}
+
+.ub-admin-actions button:hover {
+  background: #ffedd5;
+}
+
+.ub-admin-actions .ub-admin-danger-button {
+  background: #fff1f2;
+  color: #dc2626;
+  border-color: #fecaca;
+}
+
+.ub-admin-actions .ub-admin-danger-button:hover {
+  background: #fee2e2;
+}
+
+.ub-admin-error,
+.ub-admin-success {
+  padding: 14px 16px;
+  border-radius: 10px;
+  font-size: 14px;
+  margin-bottom: 18px;
+}
+
+.ub-admin-error {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #b91c1c;
+}
+
+.ub-admin-success {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  color: #15803d;
+}
+
+.ub-admin-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(35, 22, 15, 0.55);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.ub-admin-modal {
+  width: 100%;
+  max-width: 580px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 28px;
+  box-shadow: 0 20px 80px rgba(0, 0, 0, 0.2);
+  animation: ubAdminAppear 0.2s ease;
+}
+
+@keyframes ubAdminAppear {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.ub-admin-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #f0e4db;
+}
+
+.ub-admin-modal-header h2 {
+  font-size: 24px;
+  color: #30221c;
+  margin: 0;
+}
+
+.ub-admin-modal-header button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  background: #fff1e5;
+  color: #805a40;
+  cursor: pointer;
+}
+
+.ub-admin-modal-header button:hover {
+  background: #ffedd5;
+  color: #ea580c;
+}
+
+.ub-admin-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 18px;
+  min-width: 0;
+}
+
+.ub-admin-field label {
+  color: #594338;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.ub-admin-field input,
+.ub-admin-field select,
+.ub-admin-field textarea {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid #eaded5;
+  border-radius: 10px;
+  background: #fffaf6;
+  color: #30221c;
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+  transition: 0.2s ease;
+}
+
+.ub-admin-field input:focus,
+.ub-admin-field select:focus,
+.ub-admin-field textarea:focus {
+  border-color: #f97316;
+  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.1);
+}
+
+.ub-admin-field textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.ub-admin-field small {
+  color: #dc2626;
+  font-size: 12px;
+}
+
+.ub-admin-two-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.ub-admin-preview {
+  display: block;
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  background: #fff8f2;
+  border: 1px solid #f0e4db;
+  border-radius: 12px;
+  margin-bottom: 18px;
+}
+
+.ub-admin-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.ub-admin-checkbox input {
+  width: 18px;
+  height: 18px;
+  accent-color: #f97316;
+}
+
+.ub-admin-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  border-top: 1px solid #f0e4db;
+  padding-top: 20px;
+}
+
+@media (max-width: 1000px) {
+  .ub-admin-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ub-admin-panel-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .ub-admin-tools {
+    width: 100%;
+  }
+
+  .ub-admin-search {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .ub-admin-search input {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .ub-admin-page {
+    padding: 24px 14px 40px;
+  }
+
+  .ub-admin-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  .ub-admin-header > button {
+    width: 100%;
+  }
+
+  .ub-admin-stats {
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .ub-admin-stat {
+    padding: 16px;
+    border-radius: 12px;
+  }
+
+  .ub-admin-stat h2 {
+    font-size: 26px;
+  }
+
+  .ub-admin-stat p {
+    font-size: 12px;
+  }
+
+  .ub-admin-panel {
+    padding: 14px;
+    border-radius: 14px;
+  }
+
+  .ub-admin-tools {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .ub-admin-modal {
+    padding: 20px;
+    border-radius: 14px;
+  }
+
+  .ub-admin-overlay {
+    padding: 12px;
+  }
+
+  .ub-admin-modal-actions button {
+    flex: 1;
+    padding: 12px;
+  }
+}
